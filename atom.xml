@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://sunsky6.me/"/>
-  <updated>2018-02-22T07:08:44.674Z</updated>
+  <updated>2018-02-22T07:17:13.000Z</updated>
   <id>http://sunsky6.me/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="http://sunsky6.me/2018/2018-Flags/"/>
     <id>http://sunsky6.me/2018/2018-Flags/</id>
     <published>2018-02-22T05:45:17.000Z</published>
-    <updated>2018-02-22T07:08:44.674Z</updated>
+    <updated>2018-02-22T07:17:13.000Z</updated>
     
-    <content type="html"><![CDATA[<p>给自己立下 2018 的目标。<br><img src="/img/2018.jpg" alt="2018-flags"></p><a id="more"></a><p>今天是大年初七，各行各业都在今天陆陆续续开工了。为了多陪伴父母两天时间和避开返程的高峰，节后我选择了继续休假。</p><p>一年之计在于春，应初七开工的这个日子，定下在接下来的一年里自己的一些计划和目标：</p><h1 id="Past"><a href="#Past" class="headerlink" title="Past"></a>Past</h1><p>2017 一年中经历了许多风雨，双足迈出象牙塔；</p><p>从创业团队–源续离开，经历了磕磕碰碰的求职，最后在魅族重新落了脚；</p><p>Title 从「伪全栈工程师」变成了「前端工程师」，不再像在创业团队一样身兼多向开发，静下心沉淀于自己喜欢的前端。对于非 CS 科班出身的自己来说，这是很符合自己的发展规划的；</p><p>在 11 月收获了一份与灵魂呼应的喜悦。</p><h1 id="Next"><a href="#Next" class="headerlink" title="Next"></a>Next</h1><p>2018，希望自己完成这些目标：</p><h2 id="团队业务的开发"><a href="#团队业务的开发" class="headerlink" title="团队业务的开发"></a>团队业务的开发</h2><ul><li>完善 Flyme 组件库的开发，争取在年中发布开源版本（0/100%）</li><li>完善契合团队 Weex SDK 的脚手架，增加更多的功能（0/100%）</li><li>从零开发前后端分离的后台管理系统脚手架，目标是完成一个可用的版本（0/100%）</li></ul><h2 id="增大在社区中的影响力"><a href="#增大在社区中的影响力" class="headerlink" title="增大在社区中的影响力"></a>增大在社区中的影响力</h2><ul><li>2018 全年至少产出文章 12 篇（0/100%）</li><li>全年至少进行 3 场组以上的技术分享，逐渐营造好的团队技术氛围（0/100%）</li><li>持续参与 Weex 相关开源仓库的构建，提交优秀代码</li><li>开源 Flyme 组件库，使团队在 Weex 中拥有更大的影响力</li></ul><h2 id="持续扎实基本功"><a href="#持续扎实基本功" class="headerlink" title="持续扎实基本功"></a>持续扎实基本功</h2><ul><li>《鸟哥的 Linux 私房菜》（0/100%）</li><li>《深入理解计算机操作系统》（0/100%）</li><li>《CSS 权威指南》、《CSS 揭秘》（0/100%）</li><li>《深入浅出 NodeJS》、《NodeJS 硬实战》、《Security Your NodeJS Application》（0/100%）</li><li>《深入理解 JavaScript》（0/100%）</li></ul><h2 id="增强敏捷开发的实践经验"><a href="#增强敏捷开发的实践经验" class="headerlink" title="增强敏捷开发的实践经验"></a>增强敏捷开发的实践经验</h2><ul><li>合理的团队沟通</li><li>清晰的文档输出</li><li>优秀的代码质量</li><li>稳定交付</li><li>版本快速迭代</li></ul><h2 id="技术方向衍生"><a href="#技术方向衍生" class="headerlink" title="技术方向衍生"></a>技术方向衍生</h2><ul><li>重新学习小程序开发，感受特性，参与开源社区的讨论</li><li>学习 Python，感受机器学习</li></ul><h2 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h2><ul><li>和 🐑 进行一次长途旅行</li><li>和 🐑 进行一次短途旅行</li><li>理财增值率达到 6%</li></ul><p>以上是自己立下的关于 2018 的一些 flags，遵循周期 Review 并同步进度。</p><p>Keep moving.</p><p>God help those who help themselves.</p><p>共勉。</p>]]></content>
+    <content type="html"><![CDATA[<p>给自己立下 2018 的目标。<br><img src="/img/2018.png" alt="2018-flags"></p><a id="more"></a><p>今天是大年初七，各行各业都在今天陆陆续续开工了。为了多陪伴父母两天时间和避开返程的高峰，节后我选择了继续休假。</p><p>一年之计在于春，应初七开工的这个日子，定下在接下来的一年里自己的一些计划和目标：</p><h1 id="Past"><a href="#Past" class="headerlink" title="Past"></a>Past</h1><p>2017 一年中经历了许多风雨，双足迈出象牙塔；</p><p>从创业团队–源续离开，经历了磕磕碰碰的求职，最后在魅族重新落了脚；</p><p>Title 从「伪全栈工程师」变成了「前端工程师」，不再像在创业团队一样身兼多向开发，静下心沉淀于自己喜欢的前端。对于非 CS 科班出身的自己来说，这是很符合自己的发展规划的；</p><p>在 11 月收获了一份与灵魂呼应的喜悦。</p><h1 id="Next"><a href="#Next" class="headerlink" title="Next"></a>Next</h1><p>2018，希望自己完成这些目标：</p><h2 id="团队业务的开发"><a href="#团队业务的开发" class="headerlink" title="团队业务的开发"></a>团队业务的开发</h2><ul><li>完善 Flyme 组件库的开发，争取在年中发布开源版本（0/100%）</li><li>完善契合团队 Weex SDK 的脚手架，增加更多的功能（0/100%）</li><li>从零开发前后端分离的后台管理系统脚手架，目标是完成一个可用的版本（0/100%）</li></ul><h2 id="增大在社区中的影响力"><a href="#增大在社区中的影响力" class="headerlink" title="增大在社区中的影响力"></a>增大在社区中的影响力</h2><ul><li>2018 全年至少产出文章 12 篇（0/100%）</li><li>全年至少进行 3 场组以上的技术分享，逐渐营造好的团队技术氛围（0/100%）</li><li>持续参与 Weex 相关开源仓库的构建，提交优秀代码</li><li>开源 Flyme 组件库，使团队在 Weex 中拥有更大的影响力</li></ul><h2 id="持续扎实基本功"><a href="#持续扎实基本功" class="headerlink" title="持续扎实基本功"></a>持续扎实基本功</h2><ul><li>《鸟哥的 Linux 私房菜》（0/100%）</li><li>《深入理解计算机操作系统》（0/100%）</li><li>《CSS 权威指南》、《CSS 揭秘》（0/100%）</li><li>《深入浅出 NodeJS》、《NodeJS 硬实战》、《Security Your NodeJS Application》（0/100%）</li><li>《深入理解 JavaScript》（0/100%）</li></ul><h2 id="增强敏捷开发的实践经验"><a href="#增强敏捷开发的实践经验" class="headerlink" title="增强敏捷开发的实践经验"></a>增强敏捷开发的实践经验</h2><ul><li>合理的团队沟通</li><li>清晰的文档输出</li><li>优秀的代码质量</li><li>稳定交付</li><li>版本快速迭代</li></ul><h2 id="技术方向衍生"><a href="#技术方向衍生" class="headerlink" title="技术方向衍生"></a>技术方向衍生</h2><ul><li>重新学习小程序开发，感受特性，参与开源社区的讨论</li><li>学习 Python，感受机器学习</li></ul><h2 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h2><ul><li>和 🐑 进行一次长途旅行</li><li>和 🐑 进行一次短途旅行</li><li>理财增值率达到 6%</li></ul><p>以上是自己立下的关于 2018 的一些 flags，遵循周期 Review 并同步进度。</p><p>Keep moving.</p><p>God help those who help themselves.</p><p>共勉。</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;给自己立下 2018 的目标。&lt;br&gt;&lt;img src=&quot;/img/2018.jpg&quot; alt=&quot;2018-flags&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;给自己立下 2018 的目标。&lt;br&gt;&lt;img src=&quot;/img/2018.png&quot; alt=&quot;2018-flags&quot;&gt;&lt;/p&gt;
     
     </summary>
     
