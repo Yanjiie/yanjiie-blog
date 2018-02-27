@@ -6,7 +6,7 @@
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 实际加载的是 http://[HostRoot]/assets/example.png --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">image</span> <span class="attr">src</span>=<span class="string">"/assets/example.png"</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>在安卓下引用本地图片资源<br>可能是这样的：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 实际加载的是 file://[app_res_root]/assets/example.png --&gt;</span> <span class="tag">&lt;<span class="name">image</span> <span class="attr">src</span>=<span class="string">"/assets/example.png"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 实际加载的是 file://[app_res_root]/assets/example.png --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">image</span> <span class="attr">src</span>=<span class="string">"/assets/example.png"</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="通过静态服务器获取图片资源"><a href="#通过静态服务器获取图片资源" class="headerlink" title="通过静态服务器获取图片资源"></a>通过静态服务器获取图片资源</h3><p>所有的外部引用资源可以通过类似以下的形式引入</p>
