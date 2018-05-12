@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Angular React Vue 数据驱动实现方式的区别及性能 | Mind Space</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Angular.js 1 的数据驱动实现方式：Angular 使用的是脏检查( Dirty Check )机制。Angular 视图模板里,读取数据有一个叫 $scope 的上下文,可以就认为它是一个存储数据的JS对象, 里面放了各种视图模板需要访问的数据/函数。$scope 里面的值可以自由更改 (比如说在 Angular 的控制器(Controller)里面)。 比如说有这样一常简单的 Ang">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Angular React Vue 数据驱动实现方式的区别及性能">
+<meta property="og:url" content="http://yanjiie.me/2017/12/29/Angular React Vue 数据驱动实现方式的区别及性能/index.html">
+<meta property="og:site_name" content="Mind Space">
+<meta property="og:description" content="Angular.js 1 的数据驱动实现方式：Angular 使用的是脏检查( Dirty Check )机制。Angular 视图模板里,读取数据有一个叫 $scope 的上下文,可以就认为它是一个存储数据的JS对象, 里面放了各种视图模板需要访问的数据/函数。$scope 里面的值可以自由更改 (比如说在 Angular 的控制器(Controller)里面)。 比如说有这样一常简单的 Ang">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://cn.vuejs.org/images/data.png">
+<meta property="og:updated_time" content="2018-05-12T12:59:09.503Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Angular React Vue 数据驱动实现方式的区别及性能">
+<meta name="twitter:description" content="Angular.js 1 的数据驱动实现方式：Angular 使用的是脏检查( Dirty Check )机制。Angular 视图模板里,读取数据有一个叫 $scope 的上下文,可以就认为它是一个存储数据的JS对象, 里面放了各种视图模板需要访问的数据/函数。$scope 里面的值可以自由更改 (比如说在 Angular 的控制器(Controller)里面)。 比如说有这样一常简单的 Ang">
+<meta name="twitter:image" content="http://cn.vuejs.org/images/data.png">
+  
+    <link rel="alternative" href="/atom.xml" title="Mind Space" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+<body>
+  <div id="container">
+    <div class="mobile-nav-panel">
+	<i class="icon-reorder icon-large"></i>
+</div>
+<header id="header">
+	<h1 class="blog-title">
+		<a href="/">Mind Space</a>
+	</h1>
+	<nav class="nav">
+		<ul>
+			
+      <li>
+        <a href="/">
+          首页
+        </a>
+      </li>
+      
+      <li>
+        <a href="/archives">
+          归档
+        </a>
+      </li>
+      
+      <li>
+        <a href="/categories">
+          分类
+        </a>
+      </li>
+      
+			<li><a href="https://github.com/yanjiie" id="nav-github-btn" class="nav-icon"></a></li>
+			<li><a id="nav-search-btn" class="nav-icon" title="Search"></a></li>
+			<li><a href="/atom.xml" id="nav-rss-link" class="nav-icon" title="RSS Feed"></a></li>
+		</ul>
+	</nav>
+	<div id="search-form-wrap">
+		<form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yanjiie.me"></form>
+	</div>
+</header>
+
+    <div id="main">
+      <article id="post-Angular React Vue 数据驱动实现方式的区别及性能" class="post">
+	<footer class="entry-meta-header">
+		<span class="meta-elements date">
+			<a href="/2017/12/29/Angular React Vue 数据驱动实现方式的区别及性能/" class="article-date">
+  <time datetime="2017-12-29T07:05:44.000Z" itemprop="datePublished">2017-12-29</time>
+</a>
+		</span>
+		<span class="meta-elements author">蓝小胖</span>
+		<div class="commentscount">
+			
+		</div>
+	</footer>
+	
+	<header class="entry-header">
+		
+  
+    <h1 class="article-title entry-title" itemprop="name">
+      Angular React Vue 数据驱动实现方式的区别及性能
+    </h1>
+  
+
+	</header>
+	<div class="entry-content">
+		
+    	<h1 id="Angular-js-1-的数据驱动实现方式："><a href="#Angular-js-1-的数据驱动实现方式：" class="headerlink" title="Angular.js 1 的数据驱动实现方式："></a>Angular.js 1 的数据驱动实现方式：</h1><h2 id="Angular-使用的是脏检查-Dirty-Check-机制。"><a href="#Angular-使用的是脏检查-Dirty-Check-机制。" class="headerlink" title="Angular 使用的是脏检查( Dirty Check )机制。"></a>Angular 使用的是脏检查( Dirty Check )机制。</h2><p>Angular 视图模板里,读取数据有一个叫 <code>$scope</code> 的上下文,可以就认为它是一个存储数据的JS对象, 里面放了各种视图模板需要访问的数据/函数。<code>$scope</code> 里面的值可以自由更改 (比如说在 Angular 的控制器(Controller)里面)。</p>
+<p>比如说有这样一常简单的 Angular 应用 (模板中引用了 <code>$scope</code> 里的 <code>title</code> 数据, 同时绑定了 <code>onclick</code> 事件修改 <code>title</code> 数据):</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    var testApp = angular.module('testApp', []);</span></span><br><span class="line"><span class="undefined">    testApp.controller('TestController', function ($scope) &#123;</span></span><br><span class="line"><span class="undefined">        $scope.title = 'test title';</span></span><br><span class="line"><span class="undefined">        $scope.onDIVClick = function () &#123;</span></span><br><span class="line"><span class="undefined">            $scope.title = 'another title';</span></span><br><span class="line"><span class="undefined">        &#125;;</span></span><br><span class="line"><span class="undefined">    &#125;);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">ng-app</span>=<span class="string">"testApp"</span> <span class="attr">ng-controller</span>=<span class="string">"TestController"</span> <span class="attr">ng-click</span>=<span class="string">"onDIVClick()"</span>&gt;</span></span><br><span class="line">    &#123;&#123;title&#125;&#125;  <span class="comment">&lt;!-- 显示为: test title --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>然后点击 div 触发事件, 就会调用 <code>$scope.onDIVClick</code>, 修改了 <code>title</code> 数据, 然后视图就更新了 (内容变为了 <code>another title</code>)。</p>
+<p>==这一步DOM更新是怎么做到的?==</p>
+<p>答案是, Angular 不监听数据更新, 数据发生任何改变时 Angular 都不理睬, 它只是找了一个恰当的时机, 遍历所有的DOM更新方法, 从被修改过任意次的 <code>$scope</code> 数据中尝试更新DO (这里这个”恰当的时机”就是click事件处理结束时)。</p>
+<p><strong>Angular 脏检查实现</strong></p>
+<ul>
+<li>首先, <code>$watch</code>: Angular 在解析视图模板时, 会找出其中的数据绑定, 以及对应的更新DOM的方式, (比如说这里的 <code>Angular React Vue 数据驱动实现方式的区别及性能</code>, 解析出值表达式为 <code>$scope.title</code>, 更新DOM方式为添加表达式的结果到文字内容区), 然后通过 <code>$scope.$watch</code> 将这一绑定注册到当前 <code>$scope</code> 上下文的更新响应操作里</li>
+<li>然后, <code>$apply</code>: 可能更新数据时(比如事件响应函数里), Angular 调用 <code>$scope.$apply(expression)</code> 处理操作函数, <code>$apply(...)</code> 会在处理完成后调用 <code>$scope.$digest()</code></li>
+<li><code>$digest</code>: 在这一函数里, Angular 正式执行数据到视图的查找以及更新操作:<ul>
+<li><code>$digest</code> 每一个循环里会从根作用域( <code>$rootScope</code> )开始(以深度优先方式)遍历所有的 <code>$scope</code> 注册的 <code>$watch</code> 响应操作。对每一个 <code>$watch</code> 响应, 取出数据绑定的值表达式, 求出值, 与上一次的求值作比较, 求值不一样 则取出DOM更新函数, 更新视图</li>
+<li>上一步里, 循环开始时置 <code>dirty = false</code>。只要有任何一个 <code>$watch</code> 响应的值发生了更新, 则当前 <code>$digest</code> 循环置 <code>dirty = true</code></li>
+<li>每次循环结束后, 只要 <code>dirty === true</code> 依然成立, 重新开始新的一轮 <code>$digest</code> 检查循环, 直到 <code>dirty === false</code> (这就是为什么这个实现机制叫做脏检查( Dirty Check ))</li>
+</ul>
+</li>
+</ul>
+<p><strong>脏检查会执行几次?</strong></p>
+<p>即便 $watch 响应里没有更新任何数据, 通常来说脏检查循环也会执行两次, 比如在这个例子里面就是的:</p>
+<ul>
+<li>首先, 在执行 <code>$digest</code> 开始脏检查循环前, click事件触发调用的 <code>onDIVClick</code> 中已经更新了 <code>titl</code>e 数据</li>
+<li>进入第一遍脏检查循环后, <code>Angular React Vue 数据驱动实现方式的区别及性能</code> 对应的 <code>$watch</code> 响应中, 值表达式之前的结果是 <code>&#39;test title&#39;</code>, 现在由于数据已经发生了改变, 新的结果变成了 <code>&#39;another title&#39;</code>, 第一遍循环, <code>dirty</code> 置为 <code>true</code>, 进入下一遍循环</li>
+<li>进入第二便脏检查循环后, 值表达式两次结果均为 <code>&#39;another title&#39;</code>, 没有变化, <code>dirty</code> 为 <code>false</code>。结束脏检查</li>
+</ul>
+<p>所以什么时候脏检查循环只会执行一遍呢? 就是 <code>$apply(...)</code> 处理的操作中没有数据更新操作 (这里描述并不准确, 实际上是否有数据更新跟脏循环执行次数不一定相关, 等会再说)。也就是说, 移除 <code>onDIVClick</code> 里的 <code>title</code> 赋值操作, 脏检查循环就只会执行一次。</p>
+<p>那么, 什么时候脏检查会执行无数次呢? 很简单, 在 <code>$watch</code> 响应的值表达式中中每次都返回新的数据。</p>
+<p>==推荐阅读：==</p>
+<ol>
+<li><a href="http://blog.yunfei.me/blog/angular-dirty-check.html" target="_blank" rel="noopener">Angular 脏检查机制研究</a></li>
+<li><a href="https://github.com/xufei/blog/issues/10" target="_blank" rel="noopener">Angular沉思录（一）数据绑定</a></li>
+</ol>
+<h1 id="Vue-js-的数据驱动实现方式："><a href="#Vue-js-的数据驱动实现方式：" class="headerlink" title="Vue.js 的数据驱动实现方式："></a>Vue.js 的数据驱动实现方式：</h1><h2 id="Vue-使用的是依赖收集。（基础-——-getter-setter）"><a href="#Vue-使用的是依赖收集。（基础-——-getter-setter）" class="headerlink" title="Vue 使用的是依赖收集。（基础 —— getter/setter）"></a>Vue 使用的是依赖收集。（基础 —— getter/setter）</h2><p>同样是实现了双向绑定，但 Vue 使用的方法与 Angular 却完全不同。Vue 的文档中是这样描述的：</p>
+<blockquote>
+<p>把一个普通对象传给 Vue 实例作为它的 data 选项，Vue.js 将遍历它的属性，用 Object.defineProperty 将它们转为 getter/setter。这是 ES5 特性，不能打补丁实现，这便是为什么 Vue.js 不支持 IE8 及更低版本。</p>
+</blockquote>
+<p><code>getter/setter</code> 使得开发者有机会在对象属性取值和赋值的时候进行自定义操作，响应系统便是基于这个特性实现的。</p>
+<h3 id="Watcher"><a href="#Watcher" class="headerlink" title="Watcher"></a>Watcher</h3><p><code>Watcher</code> 是 Vue 核心。每个 <code>Watcher</code> 都拥有一个自己的表达式，<code>Watcher</code> 的作用就是维护这个表达式依赖的数据项，并在数据项更新的时候更新表达式的值。其实从 Vue 的实现来讲，<code>Watcher</code> 应该被叫做 <code>Listener</code>或 <code>Subscriber</code> 更加合适。</p>
+<blockquote>
+<p>模板中每个指令/数据绑定都有一个对应的 watcher 对象，在计算过程中它把属性记录为依赖。之后当依赖的 setter 被调用时，会触发 watcher 重新计算 ，也就会导致它的关联指令更新 DOM。<br><img src="http://cn.vuejs.org/images/data.png" alt=""></p>
+</blockquote>
+<h3 id="依赖收集"><a href="#依赖收集" class="headerlink" title="依赖收集"></a>依赖收集</h3><p>依赖收集是通过 <code>property</code> 的 <code>getter</code> 完成的，依赖收集的过程涉及到 Vue 的三类对象：<code>Watcher</code>、<code>Dep</code> 和 <code>Observer</code>。其中 <code>Observer</code> 负责将数据项转化为响应式对象，而 <code>Dep</code> 则用来描述 <code>Watcher</code> 和 <code>Observer</code> 的依赖关系。</p>
+<p>Vue 中，每个 <code>Observer</code> 对应一个 <code>Dep</code> 对象，而每个 <code>Dep</code> 对象可以对应多个 <code>Watcher</code>，每个 <code>Watcher</code> 也可以对应多个 <code>Dep</code> 对象，从而实现了多对多的依赖关系。</p>
+<p>搞清楚了三类对象，下面就来看看依赖关系到底是怎样建立起来的：</p>
+<ol>
+<li>Vue 实例初始化的过程中，首先，每个数据项都会生成一个 <code>Observer</code>，每个 <code>Observer</code> 又会初始化一个 <code>Dep</code> 实例；</li>
+<li>接下来，模板中的每个指令和数据绑定都会生成一个 <code>Watcher</code> 实例，实例化的过程中，会计算这个 <code>Watcher</code> 对应表达式的值；</li>
+<li>计算开始之前，<code>Watcher</code> 会设置 <code>Dep</code> 的静态属性 <code>Dep.target</code> 指向其自身，开始依赖收集；</li>
+<li>计算表达式的过程中，该 <code>Watcher</code> 依赖的数据项会被访问，从而触发其 <code>getter</code> 中的代码；</li>
+<li>数据项 <code>getter</code> 中会判断 <code>Dep.target</code> 是否存在，若存在则将自身的 <code>Dep</code> 实例保存到 <code>Watcher</code> 的列表中，并在此 <code>Dep</code> 实例中注册 <code>Watcher</code> 为订阅者；</li>
+<li>重复上述过程直至 <code>Watcher</code> 计算结束，<code>Dep.target</code> 被清除，依赖收集完成；</li>
+</ol>
+<p>在依赖关系建立后，每当数据项发生变化（<code>setter</code> 被访问），<code>Observer</code> 会调用其 <code>Dep</code> 实例的 <code>notify</code> 方法，在这个 <code>Dep</code> 实例中注册的 <code>Watcher</code> 将会被通知，并重新进行计算及依赖收集的过程，然后执行相应的回调函数。以上就是完成响应的整个过程。</p>
+<p>==推荐阅读：==</p>
+<ol>
+<li><a href="https://cn.vuejs.org/v2/guide/reactivity.html" target="_blank" rel="noopener">Vue官方文档–深入响应式原理</a></li>
+<li><a href="https://zjy.name/archives/vue-reactive-study.html" target="_blank" rel="noopener">Vue 响应式原理探析</a></li>
+<li><a href="https://segmentfault.com/a/1190000011153487" target="_blank" rel="noopener">深入浅出基于“依赖收集”的响应式原理</a></li>
+</ol>
+<h2 id="React-js-的数据驱动实现方式"><a href="#React-js-的数据驱动实现方式" class="headerlink" title="React.js 的数据驱动实现方式"></a>React.js 的数据驱动实现方式</h2><p>React 本质没有双向绑定概念，算法本质是 diff。通过 dom 的抽象化，在 render 时通过比较 vdom 的差异，再使用原生 api patch 到真实 dom 中。</p>
+
+    
+	</div>
+	<footer class="entry-footer">
+		<div class="entry-meta-footer">
+			<span class="category">
+				
+			</span>
+			<span class="tags">
+				
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li></ul>
+
+			</span>
+		</div>
+	</footer>
+	
+    
+<nav id="article-nav">
+  
+    <a href="/2018/01/12/在-Weex-中使用国际化/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          在 Weex 中使用国际化
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/24/Weex-的图片加载方案/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">
+        
+          Creator 图片的加载方案预想
+        
+      </div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+  <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    </div>
+    <div class="mb-search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:yanjiie.me">
+  </form>
+</div>
+<footer id="footer">
+	<h1 class="footer-blog-title">
+		<a href="/">Mind Space</a>
+	</h1>
+	<span class="copyright">
+		&copy; 2018 蓝小胖
+	</span>
+</footer>
+
+    <script src="/js/jquery-2.1.4.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
