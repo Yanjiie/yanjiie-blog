@@ -1,0 +1,31 @@
+<div class="category">
+  <!-- title -->
+  <div class="category_header">
+  	 <h1><%= __('分类') %></h1>
+  </div>
+
+  <div class="category_types">
+  <% if (site.categories.length){ %>
+		<ul class="category_box">
+		<% site.categories.sort('name').each(function(item){ %>
+			<li><a  class="category_link" href="<%= item.name %>"><%= item.name %></a></li>
+		<% }); %>
+		</ul>
+
+    <div class="category_archive">
+      <% site.categories.sort('name').each(function(item){ %>
+        <h4 class="category_archive_title show" data-toggle="collapse" id="<%= item.name %>"> <%= item.name %></h4>
+        <ul class="category_archive_list">
+          <% site.posts.sort('date', -1).forEach(function(it){
+            it.categories.data.forEach(function (c) {
+              if (c._id === item._id) { %>
+                <li class="category_archive_item"><a href="<%= config.root %><%= it.path %>" <% if (it.description) { %> title="<%= it.description %>" <% } %>><%= it.title %></a></li>
+              <% }
+            }) %>
+    	    <% }); %>
+        </ul>
+      <% }); %>
+    </div>
+  <% } %>
+  </div>
+</div>
