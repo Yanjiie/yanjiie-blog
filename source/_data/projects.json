@@ -1,0 +1,32 @@
+[
+  {
+     "name":"Weex FlymeUI",
+     "url":"https://github.com/FlymeApps/weex-flymeui",
+     "desc":"🐼A Flyme Style UI library based on Weex for Creator."
+  },
+  {
+     "name":"Weex Slot Machine",
+     "url":"https://www.flyme.cn/",
+     "desc":"🎰A slot-machine component based in Weex platform."
+  },
+  {
+     "name":"Weex UI",
+     "url":"https://github.com/alibaba/weex",
+     "desc":" Alibaba Weex Project."
+  },
+  {
+     "name":"Weex Project",
+     "url":"https://github.com/alibaba/weex-ui",
+     "desc":"🏄A rich interaction, lightweight, high performance UI library based on Weex."
+  },
+  {
+     "name":"Flyme Webside",
+     "url":"https://www.flyme.cn/",
+     "desc":"The FlymeOS official webside."
+  },
+  {
+     "name":"ThanBach Shop",
+     "url":"http://www.thanbach.com/",
+     "desc":"A Vietnam Online Shopping Mall."
+  }
+]

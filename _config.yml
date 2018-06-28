@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Mind Space
+title: Zoro
 subtitle:
 description: God help those who help themselves.
-author: 蓝小胖
-language: zh-CN
+author: Yanjiie
+language: zh-cn
 timezone:
 
 # URL
@@ -78,8 +78,9 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://github.com/hexojs/hexo/wiki/Plugins
 ## Themes: https://github.com/hexojs/hexo/wiki/Themes
-theme: apollo
-exclude_generator:
+theme: cactus
+theme_config:
+  colorscheme: white
 
 # Feed
 ## Hexo Feed

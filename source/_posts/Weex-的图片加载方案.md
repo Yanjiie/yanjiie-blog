@@ -1,7 +1,7 @@
 ---
 title: Creator 图片的加载方案预想
 date: 2017-11-24 18:45:13
-tags:
+author: "蓝小胖"
 categories:
 - 技术
 ---

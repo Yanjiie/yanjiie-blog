@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Angular React Vue 数据驱动实现方式的区别及性能"
-subtitle: "记一次组内分享"
 date: 2017-12-29 15:05:44
 author: "蓝小胖"
 tags:

@@ -40,7 +40,8 @@ $ npm install vue-i18n -D
 ### 使用：
 
 **入口文件 index.js**:
-```js
+
+```javascript
 import VueI18n from 'vue-i18n'
 var App = require('./index.vue')
 
@@ -76,6 +77,7 @@ new Vue({
 ```
 
 **.Vue 单文件中**:
+
 ```html
 <template>
   <div class="wrapper">
@@ -85,7 +87,8 @@ new Vue({
 ```
 
 **切换语言**:
-```js
+
+```javascript
 export default {
     data: () => ({}),
     methods: {

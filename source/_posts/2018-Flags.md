@@ -1,6 +1,7 @@
 ---
 title: 2018 Flags
 date: 2018-02-22 13:45:17
+author: "蓝小胖"
 tags:
 - Flags
 - 目标
@@ -9,6 +10,7 @@ categories:
 ---
 
 给自己立下 2018 的目标。
+
 ![2018-flags](/img/2018.png)
 
 <!-- more -->
